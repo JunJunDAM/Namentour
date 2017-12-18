@@ -10,20 +10,22 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class BBDD extends SQLiteOpenHelper {
 
-    String usuario = "CREATE TABLE Usuarios (id INTEGER, nombre TEXT, apellido TEXT, correo TEXT, contraseña TEXT)";
-    
+    String usuario = "CREATE TABLE Usuarios (nombre TEXT, apellido TEXT, correo TEXT, contraseña TEXT, nickname TEXT)";
+
 
     public BBDD(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
 
     @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
-
+    public void onCreate(SQLiteDatabase sqldb) {
+        sqldb.execSQL(usuario);
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+    public void onUpgrade(SQLiteDatabase sqldb, int versionActual, int versionNueva) {
 
+        sqldb.execSQL("DROP TABLE IF EXISTS Usuarios");
+        sqldb.execSQL(usuario);
     }
 }

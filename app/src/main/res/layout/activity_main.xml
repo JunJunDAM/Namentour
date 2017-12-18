@@ -9,7 +9,7 @@
     <Button
         android:id="@+id/btn_iniciarsesion"
         android:layout_width="150dp"
-        android:layout_height="53dp"
+        android:layout_height="50dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="52dp"
         android:layout_marginTop="47dp"
@@ -22,7 +22,7 @@
     <Button
         android:id="@+id/btn_registrar"
         android:layout_width="150dp"
-        android:layout_height="49dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="50dp"
         android:text="Registrarse"
@@ -57,11 +57,11 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="361dp"
+        android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:text="NAMENTOUR"
         android:textAlignment="center"
         android:textSize="36sp"
